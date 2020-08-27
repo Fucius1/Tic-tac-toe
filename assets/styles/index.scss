@@ -1,1 +1,91 @@
 @import '~bootstrap/scss/bootstrap';
+
+*{
+    box-sizing: border-box;
+    font-family: Papyrus, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    align-items: center;
+    background: rgba($color: orange, $alpha: 1.0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.game-board{
+    display: grid;
+    grid-template-columns: 10px ;
+    height: 350px;
+    width: 350px;
+
+}
+
+h1{
+    color: red;
+}
+.board{
+    
+    align-items: center;
+    border: 10px solid black;
+    display: flex;
+    flex-direction: row;
+    font-size: 3rem;
+    font-weight: bold;
+    height: 200px;
+    justify-content: center;
+    transition: backround 0.2s ease-in-out;
+    width: 200px;
+}
+
+.board:hover{
+    background: greenyellow;
+    cursor: pointer;
+    
+}
+
+.occupied:hover {
+    background: purple;
+}
+
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+
+.playerWin{
+    color: green;
+
+}
+
+.computerWin{
+    color:red;
+}
+
+.tie {
+    color: blue;
+}
