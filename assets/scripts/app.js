@@ -8,4 +8,25 @@
 
 $(() => {
   // your JS code goes here
+
+  $('#play-game').hide()
+  $('#sign-out').hide() 
+
+  $('#password-form').hide()
+  // your JS code goes here
+ $('#sign-up-form').on('submit', authEvents.onSignUp)
+
+ $('#sign-in-form').on('submit', authEvents.onSignIn)
+
+ $('#password-form').on('submit', authEvents.onChangePassword)
+
+ 
+ $('#sign-out').on('submit', authEvents.onSignOut)
+ $('#play-game').on('submit', authEvents.onPlayGame)
+
+
+
+
+
+
 })
