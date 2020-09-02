@@ -2,14 +2,14 @@
 
 *{
     box-sizing: border-box;
-    font-family: Papyrus, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .container {
     align-items: center;
-    background: rgba($color: orange, $alpha: 1.0);
+    background: rgba($color: aqua, $alpha: 1.0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,16 +17,20 @@
 
 }
 
-.game-board{
+.game-board {
     display: grid;
-    grid-template-columns: 10px ;
+    grid-template-columns: auto auto auto;
     height: 350px;
     width: 350px;
+    justify-content: center;
 
 }
 
 h1{
-    color: red;
+    color: goldenrod;
+    justify-content: center;
+    font-size: 75px;
+    font-weight: bold;
 }
 .board{
     
@@ -36,16 +40,50 @@ h1{
     flex-direction: row;
     font-size: 3rem;
     font-weight: bold;
-    height: 200px;
+    height: 180px;
     justify-content: center;
     transition: backround 0.2s ease-in-out;
-    width: 200px;
+    width: 180px;
 }
 
 .board:hover{
-    background: greenyellow;
+    background: goldenrod;
     cursor: pointer;
     
+}
+
+
+#sign-up-form {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+h3 {
+    
+    align-items: center;
+    color:goldenrod;
+    @import '~bootstrap/scss/bootstrap';
+
+
+.container {
+    align-items: center;
+    background: rgba($color: aqua, $alpha: .7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 350px;
+    width: 350px;
+    justify-content: center;
+
 }
 
 .occupied:hover {
@@ -53,29 +91,6 @@ h1{
 }
 
 
-#block_0,
-#block_1,
-#block_2 {
-  border-top: none;
-}
-
-#block_0,
-#block_3,
-#block_6 {
-  border-left: none;
-}
-
-#block_6,
-#block_7,
-#block_8 {
-  border-bottom: none;
-}
-
-#block_2,
-#block_5,
-#block_8 {
-  border-right: none;
-}
 
 .playerWin{
     color: green;
@@ -89,3 +104,36 @@ h1{
 .tie {
     color: blue;
 }
+
+    
+#square_0{
+
+    border-top: hidden;
+}
+#square_1{
+
+    border-top: none;
+}
+#square_2 {
+  border-top: none;
+}
+
+#square_0,
+#square_3,
+#square_6 {
+  border-left: none;
+}
+
+#square_6,
+#square_7,
+#square_8 {
+  border-bottom: none;
+}
+
+#square_2,
+#square_5,
+#square_8 {
+  border-right: none;
+}
+       
+    }

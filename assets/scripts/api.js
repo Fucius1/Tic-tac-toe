@@ -2,7 +2,9 @@
 
 
 
-const config = require('./../config')
+const config = require('./config')
+
+
 const signUp = function (data){
     return $.ajax({
         url: config.apiUrl + '/sign-up',
@@ -35,7 +37,7 @@ const changePassword = function (data) {
   }
 
 //--------------------------------------------------------------
-const SignOut = function (data) {
+const signOut = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'PATCH',
@@ -55,8 +57,26 @@ const playGame = function (data) {
     data: data
   })
 }
+//----------------------------------------------------------------
+
+const newGame = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/new-game',
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
+
 
 
 module.exports = {
-
+signIn,
+signOut,
+signUp,
+playGame,
+changePassword,
+newGame
 }

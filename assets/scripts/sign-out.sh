@@ -1,6 +1,6 @@
 # VARIABLE=VALUE sh curl-scripts/auth/sign-out.sh
 
-curl "https://library-express-api.herokuapp.com/sign-out" \
+curl "https://tic-tac-toe-api-production.herokuapp.com/sign-out" \
   --include \
   --request DELETE \
 

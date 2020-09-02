@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -17,9 +17,9 @@
 
 
     <body>
-      <h1>Browser Template</h1>
-      
-      <section>
+      <h3>Welcome to the Game!</h3>
+      <p id="message"></p>
+      <section class="word">
         <form id="sign-up-form">
           <fieldset>
             <legend>Sign Up!</legend>
@@ -28,7 +28,7 @@
            <label for="password">Password:</label>
          <input id="password" name="credentials[password]" type="password" placeholder="Password">
            <label for="Password Confirmation">Password Confirmation:</label>
-         <input id="password-Confrimation" name="credentials[password-confirmation]" type="password" placeholder="Password_Confirmation">
+         <input id="password_Confrimation" name="credentials[password_confirmation]" type="password" placeholder="Password_Confirmation">
          
            <input type="submit" value="sign up!">
        
@@ -37,7 +37,7 @@
      </section>
    
    
-     <section>
+     <section class="word">
        <form id="sign-in-form">
          <fieldset>
            <legend>Sign In!</legend>
@@ -53,7 +53,7 @@
     </section>
    
     
-    <section>
+    <section class="word">
      <form id="password-form">
        <fieldset>
          <legend>Change Password!</legend>
@@ -68,7 +68,7 @@
    </section>
 
 
-   <section>
+   <section class="word">
     <form id="sign-out">
       <fieldset>
         <legend>Sign Out!</legend>
@@ -79,7 +79,7 @@
    </form>
   </section>
 
-  <section>
+  <section class="word">
     <form id="play-game">
       <fieldset>
         <legend>Play Game!</legend>
@@ -93,28 +93,30 @@
 <section>
   <div class="container">
   <h1>Tic-Tac-Toe</h1>
-  <div class="game-board"
-<div id="square_0" class="board"></div>
-<div id="square_1" class="board"></div>
-<div id="square_2" class="board"></div>
-<div id="square_3" class="board"></div>
-<div id="square_4" class="board"></div>
-<div id="square_5" class="board"></div>
-<div id="square_6" class="board"></div>
-<div id="square_7" class="board"></div>
-<div id="square_8" class="board"></div>
+  <div class="game-board">
+<div data-cell="0" id="square_0" class="board"></div>
+<div data-cell="1" id="square_1" class="board"></div>
+<div data-cell="2" id="square_2" class="board"></div>
+<div data-cell="3" id="square_3" class="board"></div>
+<div data-cell="4" id="square_4" class="board"></div>
+<div data-cell="5" id="square_5" class="board"></div>
+<div data-cell="6" id="square_6" class="board"></div>
+<div data-cell="7" id="square_7" class="board"></div>
+<div data-cell="8" id="square_8" class="board"></div>
 </div>
 </div>
 
 </section>
 
-<div class="container"
+<div class="container">
   <h2 id="winner"></h2>
-<button onclick="new_game">New Game</button>
+<button id="newgame" onclick="new_game">New Game</button>
   </div>
 
+
+
   <script>
-let game_board = ["","","","","","","","",""]
+
 
 
 

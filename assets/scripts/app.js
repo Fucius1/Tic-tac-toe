@@ -5,6 +5,13 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+const authEvents = require('./events')
+const store = require('./store')
+
+///auth
+//const authEvents = require('')
+
+
 
 $(() => {
   // your JS code goes here
@@ -13,7 +20,7 @@ $(() => {
   $('#sign-out').hide() 
 
   $('#password-form').hide()
-  // your JS code goes here
+  
  $('#sign-up-form').on('submit', authEvents.onSignUp)
 
  $('#sign-in-form').on('submit', authEvents.onSignIn)
@@ -25,8 +32,9 @@ $(() => {
  $('#play-game').on('submit', authEvents.onPlayGame)
 
 
+ $('#newgame').on('click', authEvents.onNewGame)
 
 
-
-
+ //event handler funciton recieves event as an argument
+$('.board').on('click', authEvents.onBoardClick) 
 })
